@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded',() => {
         console.log(t);
     });
 
+    let lista= [new Szazlabu(12)];
+
+    document.getElementById('feladat6').addEventListener('click',()=> szazlabuMegjelenites('lista',lista));
+
 });
 
 class Szazlabu{
@@ -41,13 +45,13 @@ function labakbolSzazlabuk(t){
     return t.map(e => new Szazlabu(e))
 };
 
-function szazlabuMegjelenites(){
+function szazlabuMegjelenites(a,t){
 
-    let szuloElem = document.getElementById('a');
+    let szuloElem = document.getElementById(a);
 
     let label= document.createElement('label');
     
-    t.array.forEach(e =>{
+    t.forEach(e =>{
         label.textContent = e.toString();
         let listaElem= document.createElement('li');
         listaElem.appendChild(label);
