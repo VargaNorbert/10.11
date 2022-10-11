@@ -11,5 +11,13 @@ document.addEventListener('DOMContentLoaded',() => {
        console.log(t2);
     });
 
+    document.getElementById('hozzaad').addEventListener('click', () => {
+
+
+        t.push(document.getElementById('szam').value);
+
+        console.log(t);
+    });
+
 
 });
