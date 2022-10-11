@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded',() => {
 
     }
 
-    let t2= t.filter(e => e%5!=0);
-
-        console.log(t2);
+    document.getElementById('gomb').addEventListener('click', () =>{
+       let t2= t.filter(e => e%5==0);
+       console.log(t2);
+    });
 
 
 });
