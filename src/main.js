@@ -19,5 +19,40 @@ document.addEventListener('DOMContentLoaded',() => {
         console.log(t);
     });
 
-
 });
+
+class Szazlabu{
+    labakSzama;
+
+    constructor (labakSzama){
+        this.labakSzama= labakSzama;
+    }
+
+    toString(){
+        return this.labakSzama + 'lábú százlábú';
+    }
+
+   
+};
+
+function labakbolSzazlabuk(t){
+    let tomb= new [Szazlabu];
+
+    return t.map(e => new Szazlabu(e))
+};
+
+function szazlabuMegjelenites(){
+
+    let szuloElem = document.getElementById('a');
+
+    let label= document.createElement('label');
+    
+    t.array.forEach(e =>{
+        label.textContent = e.toString();
+        let listaElem= document.createElement('li');
+        listaElem.appendChild(label);
+        szuloElem.appendChild(listaElem);
+    })
+
+    
+}
